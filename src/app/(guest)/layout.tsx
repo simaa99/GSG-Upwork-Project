@@ -1,4 +1,4 @@
-import FooterAuthComponent from "@/components/atoms/FooterAuthComponent";
+import FooterAuthComponent from "@/components/atoms/FooterAuthComponent/FooterAuthComponent";
 import HeaderAuthComponent from "@/components/atoms/HeaderAuthComponent";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
