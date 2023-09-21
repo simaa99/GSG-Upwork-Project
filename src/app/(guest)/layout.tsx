@@ -1,19 +1,25 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import FooterAuthComponent from "@/components/atoms/FooterAuthComponent";
+import HeaderAuthComponent from "@/components/atoms/HeaderAuthComponent";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'upwork',
-  description: 'create upwork app',
-}
+  title: "upwork",
+  description: "create upwork app",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <div>layout guest</div>
-  )
+    <>
+      <HeaderAuthComponent/>
+      {children}
+      <FooterAuthComponent/>
+      </>
+  );
 }
