@@ -7,13 +7,13 @@ import { InputAdornment, Input, InputBaseComponentProps } from "@mui/material";
 import { InputFeild } from "./_document";
 
 interface IndexProps {
-  icon: "email" | "password";
+  icon?: "email" | "password";
   value: string;
   name: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
   err: any;
-  type: "text" | "password" | "email"; // Add other valid types as needed
+  type?: "text" | "password" | "email"; // Add other valid types as needed
   sx?: React.CSSProperties;
 }
 
@@ -31,10 +31,19 @@ export default function Index({
 
   const viewAbility = () => setViewPassword((prev) => !prev);
 
-  const Icon = {
-    email: <PersonSharpIcon sx={{ color: "#000" }} />,
-    password: <LockSharpIcon sx={{ color: "#000" }} />,
-  }[icon];
+  const getIcon = (icon: "email" | "password" | undefined) => {
+    switch (icon) {
+      case "email":
+        return <PersonSharpIcon sx={{ color: "#000" }} />;
+      case "password":
+        return <LockSharpIcon sx={{ color: "#000" }} />;
+      default:
+        return null; 
+    }
+  };
+  
+  const Icon = getIcon(icon);
+  
 
   const inputProp: InputBaseComponentProps = {
     style: {
