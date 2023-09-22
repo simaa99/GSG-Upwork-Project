@@ -4,8 +4,8 @@
   "normalRegister": "Create my Account",
   "remmberMe": "Keep me logged in",
   "loginPage": "Log in to Upwork",
-  "registerPage": "Sign up to find work you love",
-  "sendHelpfullemail": "Send me helpful emails to find rewarding work and job leads.",
+  "registerPage": "Sign up to hire talent",
+  "sendHelpfullemail": "Send me emails with tips on how to find talent that fits my needs.",
 
   "requiedEmail": { "field": "email", "err": "Please Enter email first" },
   "requiedFirstName": { "field": "fName", "err": "Please Enter name please" },
