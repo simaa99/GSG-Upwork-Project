@@ -1,22 +1,20 @@
-import { Backdrop, CircularProgress } from '@mui/material';
-import React, { FC } from 'react';
+// components/PageLoading.js
+import React from "react";
+import CircularProgress from "@mui/material/CircularProgress";
 
-interface IndexProps {
-  open: boolean;
-  handleClose: () => void;
-  color?: "primary" | "secondary" | "inherit" | undefined;
-}
-
-const Index: FC<IndexProps> = ({ open, handleClose, color }) => {
+const PageLoading = () => {
   return (
-    <Backdrop
-      sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      open={open}
-      onClick={handleClose}
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
     >
-      <CircularProgress color={color || "inherit"} />
-    </Backdrop>
+      <CircularProgress />
+    </div>
   );
 };
 
-export default Index;
+export default PageLoading;
