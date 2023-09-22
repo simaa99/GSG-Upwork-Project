@@ -111,12 +111,12 @@ const Index: React.FC = () => {
               <Typography variant="body2" text={state.email.value} />
               <TextField
                 err={state.password.err}
+                type={"password"}
                 name="password"
                 value={state.password.value}
                 onChange={onChange}
                 placeholder={"Password"}
                 icon={"password"}
-                type={"password"}
               />
               <InputAlert err={state.password.err || state.loginError} />
               <Box
@@ -147,7 +147,7 @@ const Index: React.FC = () => {
                 variant="body2"
                 sx={{ marginBottom: "30px" }}
                 onClick={removeEmail}
-                href=""
+                href="/login"
                 color={colors.mainGreenColor}
                 underline="hover"
               >
@@ -179,10 +179,12 @@ const Index: React.FC = () => {
             </InputContainer>
             <InputContainer>
               <DviderText text={data.dontHaveAccount} />
-              <Button
-                sx={{ width: "200px", marginBottom: "15px" }}
-                loginType={buttons.register}
-              />
+              <Link href="/signup">
+                <Button 
+                  sx={{ width: "200px", marginBottom: "15px" }}
+                  loginType={buttons.register}
+                />
+              </Link>
             </InputContainer>
           </>
         )}
