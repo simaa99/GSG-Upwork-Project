@@ -1,4 +1,6 @@
 import Header from "@/components/molecules/Header/Header";
+import Footer from "@/components/molecules/Footer/Footer";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -15,8 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Footer />
+    </>
   );
 }
