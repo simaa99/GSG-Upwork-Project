@@ -71,7 +71,7 @@ export default function Index({
       value={value}
       name={name}
       onChange={onChange}
-      type={type === "password" ? (viewPassword ? "password" : "text") : type}
+      type={type}
       inputProps={inputProp}
       sx={sx}
     />
