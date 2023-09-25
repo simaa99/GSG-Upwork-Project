@@ -1,10 +1,10 @@
 import React from "react";
-import HomePage from "@/components/pages/homePage";
+import JobDetails from "@/components/pages/JobDetailsPage";
 
 const upwork = () => {
   return (
     <div>
-    <HomePage/>
+    <JobDetails/>
     </div>
   );
 };
