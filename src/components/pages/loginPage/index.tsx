@@ -15,6 +15,7 @@ import colors from "@/styles/colors.json";
 import { Auth_API, LoginRoute } from "@/api/Auth";
 import { Box, Checkbox, FormControlLabel, Link } from "@mui/material";
 import InputAlert, { InputContainer, LoginContainer } from "./_document";
+import { useRouter } from "next/navigation";
 
 const Index: React.FC = () => {
   const initialState = {
@@ -24,6 +25,7 @@ const Index: React.FC = () => {
     email: { value: "", err: "" },
     password: { value: "", err: "" },
   };
+  const router = useRouter();
 
   const [state, setState] = useState(initialState);
 
@@ -70,36 +72,23 @@ const Index: React.FC = () => {
         { password: state.password.value },
         { abortEarly: false }
       );
-
+  
       setState((prevState) => ({ ...prevState, loading: true }));
-
-      axios
-        .post(Auth_API + LoginRoute, {
-          email: state.email.value,
-          password: state.password.value,
-        })
-        .then(({ data }) => {
-          setToken(data.token);
-        })
-        .catch(
-          ({
-            response: {
-              data: { message },
-            },
-          }) => {
-            setState((prevState) => ({ ...prevState, loginError: message }));
-          }
-        )
-        .finally(() => {
-          setState((prevState) => ({ ...prevState, loading: false }));
-        });
+  
+      // Instead of making an API call with Axios, you can navigate directly
+      // to the home page or any other page you want.
+      router.push('/upwork'); // Replace '/' with the desired page path
+  
     } catch (err: any) {
       setState((prevState) => ({
         ...prevState,
         password: { ...prevState.password, err: err.errors[0].err },
       }));
+    } finally {
+      setState((prevState) => ({ ...prevState, loading: false }));
     }
   };
+  
 
   return (
     <LoginContainer>

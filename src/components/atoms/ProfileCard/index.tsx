@@ -11,7 +11,7 @@ const Index: React.FC = () => {
         <Link
           href="/profile"
         >
-          Simaa S.
+          Simaa A.
         </Link>
       </Typography>
       <Typography variant='body1'>Front End Develober</Typography>

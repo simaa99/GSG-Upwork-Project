@@ -27,7 +27,9 @@ function TabPanel({
       {...other}
     >
       {value === index &&
-        (Component && content.length ? (
+        (Component && content.length ? 
+          
+          (
           <Box>
             {content.map((row, rowIndex) => (
               <React.Fragment key={rowIndex}>

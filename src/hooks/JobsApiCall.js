@@ -21,7 +21,7 @@ export default function JobsApiCall() {
         axios.get(API_URL + "jobs")
             .then(({ data }) => setApiCall(prev => ({ ...prev, jobs: data, loading: true })))
             .catch(({ data }) => setApiCall(prev => ({ ...prev, error: data, loading: true })))
-
+             
         setApiCall(prev => ({ ...prev, loading: false }))
     }, [])
 

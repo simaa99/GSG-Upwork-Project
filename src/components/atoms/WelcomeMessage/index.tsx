@@ -5,7 +5,7 @@ import { Box } from '@mui/system';
 const Greeting: React.FC = () => {
   const options: Intl.DateTimeFormatOptions = { weekday: 'long', month: 'long', day: 'numeric' };
   const today = new Date();
-  const period = today.getHours() <= 17 ? "Afternoon" : "Evening";
+  
 
   const order =
     today.getDate() === 1 ? "st" :
@@ -18,7 +18,7 @@ const Greeting: React.FC = () => {
     <Box paddingX={5} paddingY={2}>
       <Typography sx={{ fontSize: "25px", fontWeight: 500 }}>{formattedDate}</Typography>
       <Typography sx={{ fontSize: "35px", fontWeight: 600, fontFamily: "unset" }}>
-        Good {period}, Simaa A.
+        Hi, Simaa A.
       </Typography>
     </Box>
   );

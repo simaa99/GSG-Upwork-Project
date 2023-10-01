@@ -46,11 +46,11 @@ export default class Index extends Component {
         desc={"More than 30 hrs/week"}
       />
       <EditableLine
-        title={"Availability Badge"}
-        desc={"More than 30 hrs/week"}
+        title={"Hours per week "}
+        desc={"As Needed - Open to Offers"}
       />
       <EditableLine
-        title={"Availability Badge"}
+        title={"Job Preference"}
         desc={"More than 30 hrs/week"}
       />
       <EditableLine
